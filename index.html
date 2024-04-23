@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarun's Garage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .car-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .car-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .car-item h3 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .car-item p {
+            margin: 0;
+        }
+        .contact-info {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        form input, form select, form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tarun's Garage</h1>
+    </header>
+    <div class="container">
+        <h2>Famous 2024 Car Models</h2>
+        <div class="car-list">
+            <!-- Example Car Item -->
+            <div class="car-item">
+                <h3>Car Model Name</h3>
+                <p>Price: $XXXX</p>
+                <p>For Rent or Sale: <select id="rentOrSale"><option value="rent">Rent</option><option value="sale">Sale</option></select></p>
+            </div>
+            <!-- Add more car items as needed -->
+        </div>
+        <h2>Inquire About a Car</h2>
+        <form id="inquiryForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <select id="carModel" required>
+                <option value="">Select Car Model</option>
+                <!-- Add car model options -->
+            </select>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit Inquiry</button>
+        </form>
+        <div class="contact-info">
+            <p>Email: info@tarrunsgarage.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Address: 123 Main St, Anytown, USA</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('inquiryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle form submission
+            alert('Inquiry submitted!');
+        });
+    </script>
+</body>
+</html>
